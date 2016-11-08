@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+	<body>
+		<p>Group 1 Ajax</p>		
+		<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script language="Javascript" type="text/javascript">
+			if (jQuery) { alert("jQuery loaded"); }
+			function send() 
+			{
+				$.ajax(
+				{
+					type: "POST",
+					url: "ajax.aspx/Test",
+					data: { sendData: 'ok' },
+					contentType: "application/json; charset = utf - 8",
+					dataType: "json",
+					success: function (result) { alert("ok"); }
+				})
+			}
+			else if (jQuery) { alert("jQuery loaded"); }
+			function send() 
+			{
+				$.ajax(
+				{
+					type: "POST",
+					url: "ajax.aspx/Test",
+					data: { sendData: 'ko' },
+					contentType: "application/json; charset = utf - 8",
+					dataType: "json",
+					success: function (result) { alert("ko"); }
+				})
+
+		</script>
+		
+		<div id = "main">
+	</body>
+</html>
